@@ -10,6 +10,9 @@ const config = require("./config/config");
 const PORT = process.env.PORT || 3000;
 config(app);
 
+app.use('/', routerHome);
+app.use('/auth', routerAuthRegLog);
+
 async function start() {
   try {
     await db.sequelize.authenticate();
