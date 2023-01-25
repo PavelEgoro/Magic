@@ -77,6 +77,15 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+        {
+          name: 'Архилич Асерерак',
+          price: 100,
+          img: '/img/card/card9.jpg',
+          user_id: 1,
+          quality: 3,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       ],
       {},
     );
