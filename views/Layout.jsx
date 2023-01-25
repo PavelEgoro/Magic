@@ -1,5 +1,5 @@
-const React = require('react');
-const NavBar = require('./NavBar');
+const React = require("react");
+const NavBar = require("./NavBar");
 
 module.exports = function Layout({ children, currentUser, title }) {
   return (
@@ -17,6 +17,7 @@ module.exports = function Layout({ children, currentUser, title }) {
           crossOrigin="anonymous"
         />
         <script src="/application.js" defer />
+        <script src="/deleteCard.js" defer />
       </head>
       <body>
         <NavBar currentUser={currentUser} />
