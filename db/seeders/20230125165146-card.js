@@ -122,6 +122,15 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+        {
+          name: 'Детеныш Балота',
+          price: 100,
+          img: '/img/card/card14.jpg',
+          user_id: 1,
+          quality: 5,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       ],
       {},
     );
