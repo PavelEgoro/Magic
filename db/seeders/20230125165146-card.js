@@ -113,6 +113,15 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+        {
+          name: 'Злобное Мастерство',
+          price: 100,
+          img: '/img/card/card13.jpg',
+          user_id: 1,
+          quality: 1,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       ],
       {},
     );
