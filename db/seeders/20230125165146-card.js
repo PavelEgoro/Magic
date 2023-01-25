@@ -50,6 +50,15 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+        {
+          name: 'Ученый Диспут',
+          price: 100,
+          img: '/img/card/card6.jpg',
+          user_id: 1,
+          quality: 5,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       ],
       {},
     );
