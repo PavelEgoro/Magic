@@ -1,6 +1,6 @@
 const React = require('react');
 
-module.exports = function Nav({ user }) {
+module.exports = function Nav({ currentUser }) {
   return (
     <header className="header">
       <nav className="container navbar bg-body-tertiary">
@@ -9,7 +9,7 @@ module.exports = function Nav({ user }) {
             <img src="/img/logo.png" alt="Logo" className="header__img" />
           </a>
         </div>
-        {!user ? (
+        {!currentUser ? (
           <div>
             <a className="nav__link" href="/auth/login">
               <button type="submit" className="button">
