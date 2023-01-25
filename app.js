@@ -3,6 +3,8 @@ require("@babel/register");
 require("dotenv").config();
 const express = require("express");
 const db = require("./db/models");
+const routerHome = require('./routes/home.routes');
+const routerAuthRegLog = require('./routes/authRegLog.routes');
 
 const app = express();
 const config = require("./config/config");
