@@ -1,6 +1,7 @@
 const regFetch = document.querySelector('.js-formReg');
 const logFetch = document.querySelector('.js-formLog');
-console.log('wwww');
+const btnExit = document.querySelector('.js-btn-exit');
+const cardList = document.querySelector('#card_list');
 
 if (regFetch) {
   regFetch.addEventListener('submit', async (e) => {
@@ -45,8 +46,36 @@ if (logFetch) {
     if (data.message) {
       document.querySelector('#checkLog').innerHTML = data.message;
     }
-    if (data.reg) {
+    if (data.log) {
       window.location.assign('/');
+    }
+  });
+}
+
+if (btnExit) {
+  btnExit.addEventListener('click', async (event) => {
+    event.preventDefault();
+    const response = await fetch('/auth/logout', {
+      method: 'DELETE',
+    });
+    const data = await response.json();
+    if (data.delete) {
+      window.location.assign('/');
+    }
+  });
+}
+
+if (cardList) {
+  cardList.addEventListener('click', async ({ target }) => {
+    if (target.classList.contains('js-delete')) {
+      const res = await fetch(`/cards/${target.dataset.id}`, {
+        method: 'DELETE',
+      });
+
+      const data = await res.json();
+      if (data.key > 0) {
+        target.closest('.catalog__card').remove();
+      }
     }
   });
 }

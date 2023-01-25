@@ -1,7 +1,7 @@
 const React = require("react");
 const NavBar = require("./NavBar");
 
-module.exports = function Layout({ children, user, title }) {
+module.exports = function Layout({ children, currentUser, title }) {
   return (
     <html lang="en">
       <head>
@@ -20,7 +20,7 @@ module.exports = function Layout({ children, user, title }) {
         <script src="/deleteCard.js" defer />
       </head>
       <body>
-        <NavBar user={user} />
+        <NavBar currentUser={currentUser} />
         {children}
       </body>
     </html>
