@@ -4,6 +4,7 @@ const express = require("express");
 const db = require("./db/models");
 const routerHome = require('./routes/home.routes');
 const routerAuthRegLog = require('./routes/authRegLog.routes');
+const routerEditCard = require('./routes/editCard.routes')
 
 
 const app = express();
@@ -14,6 +15,7 @@ config(app);
 
 app.use('/', routerHome);
 app.use('/auth', routerAuthRegLog);
+app.use('/editcard', routerEditCard)
 
 async function start() {
   try {

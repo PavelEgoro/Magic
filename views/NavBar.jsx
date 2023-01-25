@@ -22,6 +22,9 @@ module.exports = function NavBar({ user }) {
           <a href="/auth/logout">
             <button type="submit">Logout</button>
           </a>
+          <a href="/cards">
+            <button type="submit">Personal Area</button>
+          </a>
         </div>
       )}
     </nav>
