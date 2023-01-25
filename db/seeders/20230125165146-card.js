@@ -7,7 +7,7 @@ module.exports = {
       [
         {
           name: 'Поглощение',
-          price: 100,
+          price: 300,
           img: '/img/card/card1.jpg',
           user_id: 1,
           quality: 3,
@@ -16,7 +16,7 @@ module.exports = {
         },
         {
           name: 'Помощник Абуны',
-          price: 100,
+          price: 1000,
           img: '/img/card/card2.jpg',
           user_id: 1,
           quality: 5,
@@ -25,7 +25,7 @@ module.exports = {
         },
         {
           name: 'Невероятная Выносливость',
-          price: 100,
+          price: 50,
           img: '/img/card/card3.jpg',
           user_id: 1,
           quality: 1,
@@ -34,7 +34,7 @@ module.exports = {
         },
         {
           name: 'Внезапный Распад',
-          price: 100,
+          price: 300,
           img: '/img/card/card4.jpg',
           user_id: 1,
           quality: 3,
@@ -43,7 +43,7 @@ module.exports = {
         },
         {
           name: 'Абзанская Проводница',
-          price: 100,
+          price: 500,
           img: '/img/card/card5.jpg',
           user_id: 1,
           quality: 4,
@@ -52,7 +52,7 @@ module.exports = {
         },
         {
           name: 'Ученый Диспут',
-          price: 100,
+          price: 3000,
           img: '/img/card/card6.jpg',
           user_id: 1,
           quality: 5,
@@ -61,7 +61,7 @@ module.exports = {
         },
         {
           name: 'Дрейк Академии',
-          price: 100,
+          price: 300,
           img: '/img/card/card7.jpg',
           user_id: 1,
           quality: 2,
@@ -70,7 +70,7 @@ module.exports = {
         },
         {
           name: 'Превозносимая Претендентка',
-          price: 100,
+          price: 150,
           img: '/img/card/card8.jpg',
           user_id: 1,
           quality: 2,
@@ -79,7 +79,7 @@ module.exports = {
         },
         {
           name: 'Архилич Асерерак',
-          price: 100,
+          price: 2000,
           img: '/img/card/card9.jpg',
           user_id: 1,
           quality: 3,
@@ -88,7 +88,7 @@ module.exports = {
         },
         {
           name: 'Служительница Недугов',
-          price: 100,
+          price: 700,
           img: '/img/card/card10.jpg',
           user_id: 1,
           quality: 4,
@@ -97,7 +97,7 @@ module.exports = {
         },
         {
           name: 'Награда Служителя',
-          price: 100,
+          price: 500,
           img: '/img/card/card11.jpg',
           user_id: 1,
           quality: 5,
@@ -106,7 +106,7 @@ module.exports = {
         },
         {
           name: 'Акт Измены',
-          price: 100,
+          price: 5000,
           img: '/img/card/card12.jpg',
           user_id: 1,
           quality: 5,
@@ -115,7 +115,7 @@ module.exports = {
         },
         {
           name: 'Злобное Мастерство',
-          price: 100,
+          price: 2000,
           img: '/img/card/card13.jpg',
           user_id: 1,
           quality: 1,
@@ -124,7 +124,7 @@ module.exports = {
         },
         {
           name: 'Детеныш Балота',
-          price: 100,
+          price: 200,
           img: '/img/card/card14.jpg',
           user_id: 1,
           quality: 5,
@@ -151,7 +151,7 @@ module.exports = {
         },
         {
           name: 'Боевой Маг Бэнта',
-          price: 100,
+          price: 200,
           img: '/img/card/card17.jpg',
           user_id: 1,
           quality: 2,
@@ -160,7 +160,7 @@ module.exports = {
         },
         {
           name: 'Бараль, Старший по Повиновению',
-          price: 100,
+          price: 250,
           img: '/img/card/card18.jpg',
           user_id: 1,
           quality: 3,
