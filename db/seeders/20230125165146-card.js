@@ -41,6 +41,15 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+        {
+          name: 'Абзанская Проводница',
+          price: 100,
+          img: '/img/card/card5.jpg',
+          user_id: 1,
+          quality: 4,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       ],
       {},
     );
