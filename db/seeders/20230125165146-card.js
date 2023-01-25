@@ -158,6 +158,15 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+        {
+          name: 'Бараль, Старший по Повиновению',
+          price: 100,
+          img: '/img/card/card18.jpg',
+          user_id: 1,
+          quality: 3,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       ],
       {},
     );
