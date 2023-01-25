@@ -1,7 +1,9 @@
 {
   "development": {
-    "use_env_variable": "DATABASE_URL",
+    "username": "postgres",
+    "password": "1417",
+    "database": "Magic",
+    "host": "127.0.0.1",
     "dialect": "postgres"
   }
 }
-

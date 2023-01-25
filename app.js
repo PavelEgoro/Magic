@@ -1,11 +1,11 @@
 /* eslint-disable import/no-extraneous-dependencies */
-require("@babel/register");
-require("dotenv").config();
-const express = require("express");
-const db = require("./db/models");
+require('@babel/register');
+require('dotenv').config();
+const express = require('express');
+const db = require('./db/models');
 
 const app = express();
-const config = require("./config/config");
+const config = require('./config/config');
 
 const PORT = process.env.PORT || 3000;
 config(app);
