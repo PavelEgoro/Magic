@@ -6,7 +6,7 @@ module.exports = function Nav({ user }) {
       <nav className="container navbar bg-body-tertiary">
         <div className="header__logo">
           <a href="/" className="header__link">
-            <span className="header__text">LOGO</span>
+            <img src="/img/logo.png" alt="Logo" className="header__img" />
           </a>
         </div>
         {!user ? (

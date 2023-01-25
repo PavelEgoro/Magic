@@ -1,13 +1,11 @@
 .header {
-  background-color: #222224;
+  background-color: #dddde3;
   color: #ffffff;
   margin-bottom: 50px;
 }
 
 .header__img {
-  width: 33px;
-  height: 30px;
-  margin-right: 10px;
+  height: 60px;
 }
 
 .nav__link {
