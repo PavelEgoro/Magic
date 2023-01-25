@@ -140,6 +140,15 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+        {
+          name: 'Изгоняющий Свет',
+          price: 100,
+          img: '/img/card/card16.jpg',
+          user_id: 1,
+          quality: 2,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       ],
       {},
     );
