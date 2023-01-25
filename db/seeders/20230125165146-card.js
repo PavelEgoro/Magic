@@ -131,6 +131,15 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+        {
+          name: 'Гибельный Пес',
+          price: 100,
+          img: '/img/card/card15.jpg',
+          user_id: 1,
+          quality: 1,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       ],
       {},
     );
