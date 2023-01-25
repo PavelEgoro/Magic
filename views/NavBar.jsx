@@ -28,11 +28,12 @@ module.exports = function Nav({ user }) {
               <button type="submit" className="button js-btn-exit">
                 Log out
               </button>
-            </a><a href="/cards">
+            </a><a href="/editcard">
                 <button type="submit">Personal Area</button>
               </a></>
         </div>
       )}
       </nav>
     </header>
+  )
 };
