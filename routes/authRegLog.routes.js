@@ -125,7 +125,7 @@ router.post('/login', async (req, res) => {
     }
 
     req.session.userId = user.id;
-    res.redirect('/');
+    res.json({ log: true });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -140,6 +140,5 @@ router.delete('/logout', (req, res) => {
     res.json({ delete: true });
   });
 });
-
 
 module.exports = router;
