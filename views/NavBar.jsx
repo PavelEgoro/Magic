@@ -24,16 +24,17 @@ module.exports = function Nav({ user }) {
           </div>
         ) : (
           <div>
-          <><a className="nav__link" href="/auth/logout">
+            <a className="nav__link" href="/auth/logout">
               <button type="submit" className="button js-btn-exit">
                 Log out
               </button>
-            </a><a href="/editcard">
-                <button type="submit">Personal Area</button>
-              </a></>
-        </div>
-      )}
+            </a>
+            <a href="/editcard">
+              <button type="submit">Personal Area</button>
+            </a>
+          </div>
+        )}
       </nav>
     </header>
-  )
+  );
 };

@@ -1,7 +1,7 @@
-const router = require("express").Router();
-const { User } = require("../db/models");
-const { Card } = require("../db/models");
-const create = require("../views/EditCard");
+const router = require('express').Router();
+const { User } = require('../db/models');
+const { Card } = require('../db/models');
+const create = require('../views/EditCard');
 
 router.get('/:id', async (req, res) => {
   const { userId } = req.session;
@@ -10,7 +10,7 @@ router.get('/:id', async (req, res) => {
   res.renderComponent(create, { user, id });
 });
 
-router.put("/:id", async (req, res) => {
+router.put('/:id', async (req, res) => {
   const { id } = req.params;
   const { title, description } = req.body;
   const EditCard = await Card.update(
@@ -23,7 +23,7 @@ router.put("/:id", async (req, res) => {
         id,
       },
       returning: true,
-    }
+    },
   );
   if (EditCard[0] > 0) {
     res.status(200).json({ editcard: true });
