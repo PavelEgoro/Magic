@@ -149,6 +149,15 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+        {
+          name: 'Боевой Маг Бэнта',
+          price: 100,
+          img: '/img/card/card17.jpg',
+          user_id: 1,
+          quality: 2,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       ],
       {},
     );
