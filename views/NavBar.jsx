@@ -1,29 +1,35 @@
-/* eslint-disable react/prop-types */
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-import-module-exports
-const React = require("react");
+const React = require('react');
 
-module.exports = function NavBar({ user }) {
+module.exports = function Nav({ user }) {
   return (
-    <nav>
-      <div>
-        <a href="/">Home</a>
-      </div>
-      {!user ? (
-        <div>
-          <a href="/auth/login">
-            <button type="submit">Login</button>
-          </a>
-          <a href="/auth/registration">
-            <button type="submit">Registration</button>
+    <header className="header">
+      <nav className="container navbar bg-body-tertiary">
+        <div className="header__logo">
+          <a href="/" className="header__link">
+            <span className="header__text">LOGO</span>
           </a>
         </div>
-      ) : (
-        <div>
-          <a href="/auth/logout">
-            <button type="submit">Logout</button>
+        {!user ? (
+          <div>
+            <a className="nav__link" href="/auth/login">
+              <button type="submit" className="button">
+                Login
+              </button>
+            </a>
+            <a className="nav__link" href="/auth/registration">
+              <button type="submit" className="button">
+                Registration
+              </button>
+            </a>
+          </div>
+        ) : (
+          <a className="nav__link" href="/auth/logout">
+            <button type="submit" className="button js-btn-exit">
+              Log out
+            </button>
           </a>
-        </div>
-      )}
-    </nav>
+        )}
+      </nav>
+    </header>
   );
 };

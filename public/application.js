@@ -1,5 +1,6 @@
 const regFetch = document.querySelector('.js-formReg');
-const logFetch = document.querySelector('.js-formLog'); 
+const logFetch = document.querySelector('.js-formLog');
+console.log('wwww');
 
 if (regFetch) {
   regFetch.addEventListener('submit', async (e) => {
