@@ -32,6 +32,15 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+        {
+          name: 'Внезапный Распад',
+          price: 100,
+          img: '/img/card/card4.jpg',
+          user_id: 1,
+          quality: 3,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       ],
       {},
     );
