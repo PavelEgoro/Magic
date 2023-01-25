@@ -167,6 +167,15 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+        {
+          name: 'Разрыв Связей',
+          price: 100,
+          img: '/img/card/card20.jpg',
+          user_id: 1,
+          quality: 1,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       ],
       {},
     );
