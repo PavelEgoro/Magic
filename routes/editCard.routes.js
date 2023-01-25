@@ -5,11 +5,12 @@ const create = require("../views/EditCard");
 
 router.get("/", async (req, res) => {
   const { userId } = req.session;
-  const user = await User.findOne({
-    where: { id: userId },
-  });
+  // const user = await User.findOne({
+  //   where: { id: userId },
+  // });
+  // const {currentUser} = res.locals
   const Cards = await Card.findAll({ where: { user_id: userId } });
-  res.renderComponent(create, { user, Cards });
+  res.renderComponent(create, { Cards });
 });
 router.post("/", async (req, res) => {
   const { userId } = req.session;

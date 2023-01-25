@@ -1,10 +1,10 @@
 const React = require("react");
 const Layout = require("./Layout");
 
-module.exports = function Cards({ user, title, Cards }) {
+module.exports = function Cards({ currentUser, title, Cards }) {
   Cards = Cards.sort((a, b) => a.id - b.id);
   return (
-    <Layout title={title} user={user}>
+    <Layout title={title} currentUser={currentUser}>
       <div className="catalog row container" id="card_list">
         {Cards.map((el) => (
           <div key={el.id} className="card catalog__card">
