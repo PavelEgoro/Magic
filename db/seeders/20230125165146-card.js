@@ -104,6 +104,15 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+        {
+          name: 'Акт Измены',
+          price: 100,
+          img: '/img/card/card12.jpg',
+          user_id: 1,
+          quality: 5,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       ],
       {},
     );
