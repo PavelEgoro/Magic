@@ -26,9 +26,9 @@ router.post('/', async (req, res) => {
   res.redirect('/editcard');
 });
 
-router.post('/upload', async(reg, res) =>{
-  
-})
+// router.post('/upload', async(reg, res) =>{
+
+// })
 
 router.delete('/:idCard', async (req, res) => {
   const { idCard } = req.params;

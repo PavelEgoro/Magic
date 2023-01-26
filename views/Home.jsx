@@ -20,6 +20,7 @@ module.exports = function Home({ title, currentUser, Cards }) {
             >
               <img src={el.img} className="img-card" alt="img" />
               <style className="hover" />
+              <button type="button">Добавить в корзину</button>
             </div>
           ))}
         </div>
