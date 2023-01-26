@@ -5,9 +5,11 @@ const db = require('./db/models');
 const routerHome = require('./routes/home.routes');
 const routerAuthRegLog = require('./routes/authRegLog.routes');
 const routerEditCard = require('./routes/editCard.routes');
+const routerBasket = require('./routes/basket.routes');
 
 const app = express();
 const config = require('./config/config');
+
 
 const PORT = process.env.PORT || 3000;
 config(app);
@@ -15,6 +17,7 @@ config(app);
 app.use('/', routerHome);
 app.use('/auth', routerAuthRegLog);
 app.use('/editcard', routerEditCard);
+app.use('/basket', routerBasket);
 
 const start = async () => {
   try {

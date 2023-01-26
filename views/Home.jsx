@@ -18,6 +18,16 @@ module.exports = function Home({ title, currentUser, Cards }) {
               <img src={el.img} className="catalog__img" alt="img" />
               <h5 className="catalog__title">{el.name}</h5>
               <p className="catalog__text">price:{el.price}</p>
+
+              {/* <button
+            type="button"
+            className="btn btn-dark favorite-btn"
+          >
+            В корзину
+          </button> */}
+
+<input type="button" value="В корзину" onclick="location.href='/basket'" />
+
             </div>
           ))}
         </div>
