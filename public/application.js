@@ -6,7 +6,9 @@ const cardList = document.querySelector('#card_list');
 if (regFetch) {
   regFetch.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const { name, email, password, action, method } = e.target;
+    const {
+      name, email, password, action, method,
+    } = e.target;
     const res = await fetch(action, {
       method,
       headers: { 'Content-Type': 'Application/json' },
@@ -31,7 +33,9 @@ if (regFetch) {
 if (logFetch) {
   logFetch.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const { name, password, action, method } = e.target;
+    const {
+      name, password, action, method,
+    } = e.target;
     const res = await fetch(action, {
       method,
       headers: { 'Content-Type': 'Application/json' },

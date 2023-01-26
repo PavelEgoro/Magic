@@ -17,7 +17,11 @@ module.exports = function Home({ title, currentUser, Cards }) {
             <div className="card catalog__card" key={el.id}>
               <img src={el.img} className="catalog__img" alt="img" />
               <h5 className="catalog__title">{el.name}</h5>
-              <p className="catalog__text">price:{el.price}</p>
+              <p className="catalog__text">
+                price:
+                {el.price}
+              </p>
+              <button type="button">Добавить в корзину</button>
             </div>
           ))}
         </div>

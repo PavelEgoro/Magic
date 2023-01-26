@@ -3,24 +3,27 @@ const {
 } = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
-  class Basket extends Model {
-    static associate({ User, BasketList }) {
-      this.belongsTo(User, { foreignKey: 'user_id' });
-      this.hasMany(BasketList, { foreignKey: 'basket_id' });
+  class BasketList extends Model {
+    static associate({ Basket, Card }) {
+      this.belongsTo(Basket, { foreignKey: 'basket_id' });
+      this.belongsTo(Card, { foreignKey: 'card_id' });
     }
   }
-  Basket.init({
+  BasketList.init({
     id: {
       allowNull: false,
       autoIncrement: true,
       primaryKey: true,
       type: DataTypes.INTEGER,
     },
-    user_id: {
+    basket_id: {
       type: DataTypes.INTEGER,
     },
-    status: {
-      type: DataTypes.BOOLEAN,
+    card_id: {
+      type: DataTypes.INTEGER,
+    },
+    count: {
+      type: DataTypes.INTEGER,
     },
     createdAt: {
       allowNull: false,
@@ -32,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
     },
   }, {
     sequelize,
-    modelName: 'Basket',
+    modelName: 'BasketList',
   });
-  return Basket;
+  return BasketList;
 };
