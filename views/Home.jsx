@@ -19,14 +19,12 @@ module.exports = function Home({ title, currentUser, Cards }) {
               <h5 className="catalog__title">{el.name}</h5>
               <p className="catalog__text">price:{el.price}</p>
 
-              {/* <button
+              <button
             type="button"
             className="btn btn-dark favorite-btn"
           >
             В корзину
-          </button> */}
-
-<input type="button" value="В корзину" onclick="location.href='/basket'" />
+          </button>
 
             </div>
           ))}
