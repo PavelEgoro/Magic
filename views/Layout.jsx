@@ -23,6 +23,8 @@ module.exports = function Layout({ children, currentUser, title }) {
         <script src="/script.js" defer />
         <script src="/application.js" defer />
         <script src="/deleteCard.js" defer />
+        <script src="/createCard.js" defer />
+        <script src="/addCard.js" defer />
       </head>
       <body>
         <NavBar currentUser={currentUser} />
