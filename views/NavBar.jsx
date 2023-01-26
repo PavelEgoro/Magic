@@ -24,6 +24,11 @@ module.exports = function Nav({ currentUser }) {
           </div>
         ) : (
           <div>
+            <a className="nav__link" href="/basket">
+              <button type="submit" className="button">
+                Basket
+              </button>
+            </a>
             <a className="nav__link" href="/auth/logout">
               <button type="submit" className="button js-btn-exit">
                 Log out
