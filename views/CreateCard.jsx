@@ -1,13 +1,11 @@
 const React = require('react');
-const Card = require('./Card');
 const Layout = require('./Layout');
 
-module.exports = function Cards({ currentUser, title, Cards }) {
-  Cards = Cards.sort((a, b) => a.id - b.id);
+module.exports = function Create({ currentUser, id }) {
   return (
-    <Layout title={title} currentUser={currentUser}>
+    <Layout currentUser={currentUser}>
       <div className="container">
-        <form action="/cards" id="formAddCard" method="POST">
+        <form action={`/createcard/${id}`} id="formCreateCard">
           <span>Name</span>
           <input
             className="form-control mb-2 bg-light"
@@ -29,7 +27,7 @@ module.exports = function Cards({ currentUser, title, Cards }) {
             className="form-control mb-2 bg-light"
             name="img"
             id="ImgInput"
-            type="file"
+            type="text"
             required
           />
           <span>Quality</span>
@@ -42,17 +40,12 @@ module.exports = function Cards({ currentUser, title, Cards }) {
           />
           <button
             id="knopka"
-            className="button btn-default btn-m bg-info btn2"
+            className="button btn-default btn-m bg-info"
             type="submit"
           >
-            Add Card
+            Edit
           </button>
         </form>
-      </div>
-      <div className="catalog row" id="card_list">
-        {Cards.map((card) => (
-          <Card key={card.id} card={card} />
-        ))}
       </div>
     </Layout>
   );
