@@ -4,9 +4,9 @@ const {
 
 module.exports = (sequelize, DataTypes) => {
   class Basket extends Model {
-    static associate({ Card, User }) {
+    static associate({ User, BasketList }) {
       this.belongsTo(User, { foreignKey: 'user_id' });
-      this.belongsTo(Card, { foreignKey: 'card_id' });
+      this.hasMany(BasketList, { foreignKey: 'basket_id' });
     }
   }
   Basket.init({
@@ -19,8 +19,8 @@ module.exports = (sequelize, DataTypes) => {
     user_id: {
       type: DataTypes.INTEGER,
     },
-    card_id: {
-      type: DataTypes.INTEGER,
+    status: {
+      type: DataTypes.BOOLEAN,
     },
     createdAt: {
       allowNull: false,

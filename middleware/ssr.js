@@ -1,10 +1,10 @@
-const React = require("react");
-const ReactDOMServer = require("react-dom/server");
+const React = require('react');
+const ReactDOMServer = require('react-dom/server');
 
 function renderComponent(
   reactComponent,
   props = {},
-  options = { doctype: true }
+  options = { doctype: true },
 ) {
   const reactElement = React.createElement(reactComponent, {
     ...this.app.locals,
@@ -28,4 +28,3 @@ function ssr(req, res, next) {
 }
 
 module.exports = ssr;
-

@@ -6,6 +6,7 @@ module.exports = function Basket({ title }) {
     <Layout title={title} >
       <div className="container">
         Baskey
+
       </div>
     </Layout>
   );
