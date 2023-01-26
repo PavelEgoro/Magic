@@ -15,6 +15,7 @@ routerBasket.get('/', async (req, res) => {
     //   },
     //   where: { user_id: userId, status: false },
     // },
+
   );
   console.log(actualBasket);
   res.renderComponent(BasketView);
