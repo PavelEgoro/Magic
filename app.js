@@ -4,7 +4,7 @@ const express = require('express');
 const db = require('./db/models');
 const routerHome = require('./routes/home.routes');
 const routerAuthRegLog = require('./routes/authRegLog.routes');
-const routerEditCard = require('./routes/editCard.routes');
+const routerAddCard = require('./routes/addCard.routes');
 const routerBasket = require('./routes/basket.routes');
 
 const app = express();
@@ -15,7 +15,7 @@ config(app);
 
 app.use('/', routerHome);
 app.use('/auth', routerAuthRegLog);
-app.use('/editcard', routerEditCard);
+app.use('/cards', routerAddCard);
 app.use('/basket', routerBasket);
 
 const start = async () => {

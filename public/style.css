@@ -104,9 +104,9 @@ form {
   /* --bs-card-title-spacer-y: 0.5rem; */
   --bs-card-border-width: 0 !important;
   /* --bs-card-border-color: var(--bs-border-color-translucent); */
-  --bs-card-border-radius: 10px !important;
+  --bs-card-border-radius: 20px !important;
   /* --bs-card-box-shadow: ; */
-  --bs-card-inner-border-radius: 10px !important;
+  --bs-card-inner-border-radius: 20px !important;
   /* --bs-card-cap-padding-y: 0.5rem; */
   /* --bs-card-cap-padding-x: 1rem; */
   /* --bs-card-cap-bg: rgba(0, 0, 0, 0.03); */
@@ -128,18 +128,6 @@ form {
   border-radius: var(--bs-card-border-radius);
 }
 
-/* .catalog__card {
-  max-width: 300px !important; */
-/* width: 22rem; */
-/* margin: 15px;
-  padding: 15px;
-  text-align: center;
-  transition-duration: 0.4s;
-  box-shadow: 10px 5px 5px #f5f5f5;
-  border: var(--bs-card-border-width) solid rgba(196, 196, 196, 0.18) !important;
-  align-items: center;
-} */
-
 .catalog__card {
   max-width: 320px !important;
   /* width: 22rem; */
@@ -147,7 +135,7 @@ form {
   /* padding: 15px; */
   text-align: center;
   transition-duration: 0.4s;
-  box-shadow: 10px 5px 5px #f5f5f5;
+  /* box-shadow: 10px 5px 5px #f5f5f5; */
   border: var(--bs-card-border-width) solid rgba(196, 196, 196, 0.18) !important;
   align-items: center;
 }
@@ -181,17 +169,17 @@ form {
 .img-card {
   width: 320px;
   height: 452px;
-  /* border-radius: 8px; */
+  border-radius: 20px;
 }
 
-/* .cardPika {
+.cardPika {
   width: 320px;
   height: 452px;
   position: relative;
   overflow: hidden;
   margin: 20px;
   z-index: 10;
-  touch-action: none;
+  /* touch-action: none; */
 
   border-radius: 8px;
   box-shadow: -5px -5px 5px -5px #efb2fb, 5px 5px 5px -5px #a79d66,
@@ -201,11 +189,11 @@ form {
   transition: transform 0.5s ease, box-shadow 0.2s ease;
   will-change: transform, filter;
   transform-origin: center;
-} */
+}
 
 .cardPika {
   width: 320px;
-  /* height: 452px; */
+  height: 452px;
   position: relative;
   overflow: hidden;
   /* margin: 20px; */
@@ -335,7 +323,7 @@ form {
   transition: none;
   animation: holoSparkle 12s ease 0s 1;
 } */
-
+/* 
 @keyframes holoSparkle {
   0%,
   100% {
@@ -366,7 +354,7 @@ form {
     background-position: 45% 45%;
     filter: brightness(1.2) contrast(1.25);
   }
-}
+}*/
 
 @keyframes holoGradient {
   0%,
@@ -398,7 +386,7 @@ form {
     filter: brightness(0.75) contrast(1.25);
   }
 }
-
+/*
 @keyframes holoCard {
   0%,
   100% {
@@ -419,4 +407,8 @@ form {
   55% {
     transform: rotateZ(-3deg) rotateX(-12deg) rotateY(-27deg);
   }
+} */
+
+.killAll {
+  z-index: 400;
 }

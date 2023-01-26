@@ -1,16 +1,16 @@
 const router = require('express').Router();
 const { User } = require('../db/models');
 const { Card } = require('../db/models');
-const create = require('../views/EditCard');
+const create = require('../views/AddCard');
 
 router.get('/', async (req, res) => {
   const { userId } = req.session;
-  const user = await User.findOne({
-    where: { id: userId },
-  });
+  // const user = await User.findOne({
+  //   where: { id: userId },
+  // });
   // const {currentUser} = res.locals
   const Cards = await Card.findAll({ where: { user_id: userId } });
-  res.renderComponent(create, { user, Cards });
+  res.renderComponent(create, { Cards });
 });
 
 router.post('/', async (req, res) => {
@@ -23,7 +23,7 @@ router.post('/', async (req, res) => {
     price,
     user_id: userId,
   });
-  res.redirect('/editcard');
+  res.redirect('/cards');
 });
 
 // router.post('/upload', async(reg, res) =>{

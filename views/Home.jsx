@@ -11,7 +11,7 @@ module.exports = function Home({ title, currentUser, Cards }) {
           <div>Ура, ты зарегистрировался</div>
         )}
       </div>
-      <div className="container catalog__kk">
+      <div className="container">
         <div className="catalog row">
           {Cards.map((el) => (
             <div
@@ -20,7 +20,9 @@ module.exports = function Home({ title, currentUser, Cards }) {
             >
               <img src={el.img} className="img-card" alt="img" />
               <style className="hover" />
-              <button type="button">Добавить в корзину</button>
+              <button type="button" className="killAll">
+                Добавить в корзину
+              </button>
             </div>
           ))}
         </div>
