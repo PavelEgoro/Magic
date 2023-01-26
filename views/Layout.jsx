@@ -1,5 +1,5 @@
-const React = require("react");
-const NavBar = require("./NavBar");
+const React = require('react');
+const NavBar = require('./NavBar');
 
 module.exports = function Layout({ children, currentUser, title }) {
   return (
@@ -16,6 +16,11 @@ module.exports = function Layout({ children, currentUser, title }) {
           integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
           crossOrigin="anonymous"
         />
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+          defer
+        />
+        <script src="/script.js" defer />
         <script src="/application.js" defer />
         <script src="/deleteCard.js" defer />
       </head>

@@ -1,5 +1,5 @@
-const React = require("react");
-const Layout = require("./Layout");
+const React = require('react');
+const Layout = require('./Layout');
 
 module.exports = function Cards({ currentUser, title, Cards }) {
   Cards = Cards.sort((a, b) => a.id - b.id);
@@ -12,7 +12,7 @@ module.exports = function Cards({ currentUser, title, Cards }) {
             <h5 className="catalog__title">{el.name}</h5>
             <p className="catalog__text">{el.price}</p>
             <p className="catalog__text">{el.quality}</p>
-            <a href={`/editbook/${el.id}`}>
+            <a href={`/createcard/${el.id}`}>
               <button type="submit" className="button">
                 Изменить
               </button>
@@ -25,12 +25,12 @@ module.exports = function Cards({ currentUser, title, Cards }) {
         ))}
       </div>
       <div className="container">
-        <form action="/editcard" method="POST">
+        <form action="/editcard" id="formAddCard" method="POST">
           <span>Name</span>
           <input
             className="form-control mb-2 bg-light"
             name="name"
-            id="TitleInput"
+            id="NameInput"
             type="text"
             required
           />
@@ -38,7 +38,7 @@ module.exports = function Cards({ currentUser, title, Cards }) {
           <input
             className="form-control mb-2 bg-light"
             name="price"
-            id="DescribeInput"
+            id="PriceInput"
             type="text"
             required
           />
@@ -46,21 +46,21 @@ module.exports = function Cards({ currentUser, title, Cards }) {
           <input
             className="form-control mb-2 bg-light"
             name="img"
-            id="UrlInput"
-            type="text"
+            id="ImgInput"
+            type="file"
             required
           />
           <span>Quality</span>
           <input
             className="form-control mb-2 bg-light"
             name="quality"
-            id="UrlInput"
+            id="QualityInput"
             type="text"
             required
           />
           <button
             id="knopka"
-            className="button btn-default btn-m bg-info"
+            className="button btn-default btn-m bg-info btn2"
             type="submit"
           >
             Add Card
