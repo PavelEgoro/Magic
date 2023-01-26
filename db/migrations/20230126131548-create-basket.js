@@ -15,12 +15,8 @@ module.exports = {
           key: 'id',
         },
       },
-      card_id: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: { tableName: 'Cards' },
-          key: 'id',
-        },
+      status: {
+        type: Sequelize.BOOLEAN,
       },
       createdAt: {
         allowNull: false,

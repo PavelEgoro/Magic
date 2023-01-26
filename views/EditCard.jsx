@@ -1,5 +1,5 @@
-const React = require("react");
-const Layout = require("./Layout");
+const React = require('react');
+const Layout = require('./Layout');
 
 module.exports = function Cards({ currentUser, title, Cards }) {
   Cards = Cards.sort((a, b) => a.id - b.id);
