@@ -29,7 +29,7 @@ module.exports = function Nav({ currentUser }) {
                 Log out
               </button>
             </a>
-            <a href="/editcard">
+            <a href="/cards">
               <button type="submit">Personal Area</button>
             </a>
           </div>
