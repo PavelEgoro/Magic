@@ -1,7 +1,7 @@
 const React = require('react');
 const Layout = require('./Layout');
-
-module.exports = function Home({ title, currentUser, Cards }) {
+const CaardView = require('./CaardView');
+module.exports = function Home({ title, currentUser, Cards, card }) {
   return (
     <Layout title="SECRET CARD" currentUser={currentUser}>
       {/* <div className="container">
@@ -98,22 +98,13 @@ module.exports = function Home({ title, currentUser, Cards }) {
       <div className="homePage">
         <div className="catalog-home">
           <h1>Каталог карт</h1>
+          <select>
+            <option>По возрастанию</option>
+            <option>По убыванию</option>
+          </select>
         </div>
-        <div className="container">
-          <div className="catalog row">
-            {Cards.map((el) => (
-              <div
-                className="card catalog__card cardPika pika animated"
-                key={el.id}
-              >
-                <img src={el.img} className="img-card" alt="img" />
-                <style className="hover" />
-                <button type="button" className="killAll delete">
-                  <img src="/img/icon.png" alt="" />
-                </button>
-              </div>
-            ))}
-          </div>
+        <div className="container cardCont" >
+          <CaardView Cards={Cards} />
         </div>
         <div className="home-color">
           <div className="home">

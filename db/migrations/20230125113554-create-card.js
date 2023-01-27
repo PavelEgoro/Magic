@@ -15,7 +15,7 @@ module.exports = {
         type: Sequelize.TEXT,
       },
       price: {
-        type: Sequelize.TEXT,
+        type: Sequelize.INTEGER,
       },
       quality: {
         type: Sequelize.TEXT,

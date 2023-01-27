@@ -15,9 +15,12 @@ module.exports = function Registration({ title }) {
             <input type="text" name="name" />
             <span>Email</span>
             <input type="email" name="email" />
-            <span>Password</span>
-            <input type="password" name="password" />
-            <p id="checkReg" />
+            <div className="block_for_input">
+              <span>Password</span>
+              <input type="password" name="password" id="input_test" />
+              <div id="block_check" />
+              <p id="checkReg" />
+            </div>
             <button type="submit">Registration</button>
           </form>
         </div>

@@ -155,6 +155,7 @@ form {
 .form_flex {
   display: flex;
   flex-direction: column;
+  margin-top: 50px;
 }
 
 /* card style */
@@ -496,4 +497,16 @@ form {
   display: flex;
   align-items: center;
   gap: 15px;
+}
+
+.block_for_input {
+  width: 200px;
+}
+.block_for_input input {
+  width: 100%;
+}
+#block_check {
+  height: 5px;
+  margin-top: 5px;
+  transition: 1s;
 }
