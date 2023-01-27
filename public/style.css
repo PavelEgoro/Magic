@@ -41,6 +41,7 @@ body {
   z-index: 500;
   top: 0;
   width: 100%;
+  /* margin-bottom: 50px; */
 }
 
 .header__img {
@@ -50,6 +51,12 @@ body {
 
 .nav__link {
   color: #ffffff !important;
+}
+
+.nav__link:hover {
+  color: red !important;
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 .my-carousel {
@@ -107,7 +114,7 @@ body {
 }
 
 form {
-  width: 50vw;
+  width: 24vw;
 }
 
 .book__form {
@@ -117,6 +124,7 @@ form {
 .form__flex {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .btn__flex {
@@ -127,7 +135,6 @@ form {
 .catalog {
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
 }
 
 .footer {
@@ -147,14 +154,11 @@ form {
   font-size: 16px;
 }
 
-.reg_flex {
-  display: flex;
-  justify-content: center;
-}
-
 .form_flex {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 /* card style */
@@ -496,4 +500,88 @@ form {
   display: flex;
   align-items: center;
   gap: 15px;
+}
+
+.reg_body {
+  background-image: url('/img/body1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.reg__str {
+  height: 100vh;
+}
+.reg_flex {
+  /* display: flex;
+  justify-content: center; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  backdrop-filter: blur(6px);
+  text-align: center;
+  color: white;
+}
+
+/* fitch */
+.block_for_input {
+  width: 24vw;
+}
+.block_for_input input {
+  width: 100%;
+}
+#block_check {
+  height: 5px;
+  margin-top: 5px;
+  transition: 1s;
+}
+
+.button {
+  background: linear-gradient(45deg, #d5135a, #f05924);
+  box-shadow: 0 4px 30px rgba(223, 45, 70, 0.35);
+  font-weight: bold;
+  font-size: 19px;
+  padding: 8px 0;
+  margin: 0 10px;
+  width: 210px;
+  border-radius: 50px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transform: all 0.2s;
+}
+
+.login_body {
+  background-image: url('/img/body1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card_body {
+  background-image: url('/img/body.jpg');
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  padding-top: 150px;
+}
+
+/* .card_body::before {
+  display: block;
+  content: '';
+  height: 55px;
+  margin: -55px 0 0;
+} */
+
+.card_flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  margin-bottom: 100px;
+}
+
+#formAddCard {
+  backdrop-filter: blur(6px);
 }

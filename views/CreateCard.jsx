@@ -6,15 +6,7 @@ module.exports = function Create({ currentUser, id }) {
     <Layout currentUser={currentUser}>
       <div className="container">
         <form action={`/createcard/${id}`} id="formCreateCard">
-          <span>Name</span>
-          <input
-            className="form-control mb-2 bg-light"
-            name="name"
-            id="NameInput"
-            type="text"
-            required
-          />
-          <span>Price</span>
+          <span>Цена</span>
           <input
             className="form-control mb-2 bg-light"
             name="price"
@@ -22,15 +14,7 @@ module.exports = function Create({ currentUser, id }) {
             type="text"
             required
           />
-          <span>Img</span>
-          <input
-            className="form-control mb-2 bg-light"
-            name="img"
-            id="ImgInput"
-            type="text"
-            required
-          />
-          <span>Quality</span>
+          <span>Описание</span>
           <input
             className="form-control mb-2 bg-light"
             name="quality"
@@ -43,7 +27,7 @@ module.exports = function Create({ currentUser, id }) {
             className="button btn-default btn-m bg-info"
             type="submit"
           >
-            Edit
+            Изменить
           </button>
         </form>
       </div>

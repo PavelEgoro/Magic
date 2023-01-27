@@ -8,10 +8,13 @@ module.exports = function Nav({ currentUser }) {
           <a href="/" className="header__link">
             <img src="/img/logo.png" alt="Logo" className="header__img" />
           </a>
-          <a className="nav__link" href="/">
+          <a
+            className="nav__link"
+            href="https://magic.wizards.com/ru/play-events"
+          >
             ИГРА
           </a>
-          <a className="nav__link" href="/">
+          <a className="nav__link" href="https://magic.wizards.com/ru/story">
             СЮЖЕТ
           </a>
         </div>
@@ -29,12 +32,12 @@ module.exports = function Nav({ currentUser }) {
           </div>
         ) : (
           <div className="nav_flex">
-            <a className="nav__link" href="/auth/logout">
-              <button type="submit" className="button js-btn-exit">
-                ВЫЙТИ
-              </button>
+            <a className="nav__link js-btn-exit" href="/auth/logout">
+              ВЫЙТИ
             </a>
-            <a href="/cards">ПРОФИЛЬ</a>
+            <a className="nav__link" href="/cards">
+              ПРОФИЛЬ
+            </a>
           </div>
         )}
       </nav>
