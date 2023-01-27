@@ -10,15 +10,15 @@ routerBasket.get('/', async (req, res) => {
   
   //   console.log(user);
   const cardBasket = await Basket.findAll({ where: { user_id: userId } });
-  const basketList = await Promise.all(
-    cardBasket.map(async (el) => await Card.findOne({ where: { id: el.card_id } })),
-  );
-  console.log(basketList);
+  // const basketList = await Promise.all(
+  //   cardBasket.map(async (el) => await Card.findOne({ where: { id: el.card_id } })),
+  // );
+  // console.log(basketList);
 
   res.renderComponent(BasketView, {
     title: 'My basket',
     user,
-    card_id: basketList,
+    basketList,
   });
 });
 
