@@ -5,7 +5,7 @@ module.exports = function Registration({ title }) {
   return (
     <Layout title={title}>
       <div className="reg_body">
-        <div className="container reg__str">
+        <div className="container reg__str form">
           <div className="reg_flex">
             {/* <img src="/img/" alt="" /> */}
             <form
@@ -13,6 +13,7 @@ module.exports = function Registration({ title }) {
               action="/auth/registration"
               className="js-formReg form_flex"
             >
+              <img src="/img/icon5.png" alt="" className="icon5" />
               <span>Твое имя</span>
               <input
                 type="text"

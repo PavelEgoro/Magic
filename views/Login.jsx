@@ -10,8 +10,9 @@ module.exports = function Login({ title }) {
             <form
               method="POST"
               action="/auth/login"
-              className="js-formLog form_flex"
+              className="js-formLog form_flex form"
             >
+              <img src="/img/icon6.png" alt="" className="icon6" />
               <span>Логин или email</span>
               <input
                 type="text"

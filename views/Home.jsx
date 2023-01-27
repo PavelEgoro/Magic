@@ -96,9 +96,9 @@ module.exports = function Home({ title, currentUser, Cards }) {
         </button>
       </div>
       <div className="homePage">
-        <div className="catalog-home">
+        {/* <div className="catalog-home">
           <h1>Каталог карт</h1>
-        </div>
+        </div> */}
         <div className="container">
           <div className="catalog row">
             {Cards.map((el) => (
@@ -111,6 +111,10 @@ module.exports = function Home({ title, currentUser, Cards }) {
                 <button type="button" className="killAll delete">
                   <img src="/img/icon.png" alt="" />
                 </button>
+                <div className="icon4">
+                  <img src="/img/icon4.png" alt="" />
+                  <span>{el.price}</span>
+                </div>
               </div>
             ))}
           </div>

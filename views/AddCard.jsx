@@ -9,7 +9,12 @@ module.exports = function Cards({ currentUser, title, Cards }) {
       <div className="card_body">
         <div className="container">
           <div className="card_flex">
-            <form action="/cards" id="formAddCard" method="POST">
+            <form
+              action="/cards"
+              id="formAddCard"
+              method="POST"
+              className="form-size"
+            >
               <h2>Добавь свою карточку</h2>
               <span>Название</span>
               <input
@@ -27,20 +32,20 @@ module.exports = function Cards({ currentUser, title, Cards }) {
                 type="text"
                 required
               />
+              <span>Качество</span>
+              <input
+                className="form-control mb-2 bg-light"
+                name="quality"
+                id="QualityInput"
+                type="text"
+                required
+              />
               <span>Картинка</span>
               <input
                 className="form-control mb-2 bg-light"
                 name="img"
                 id="ImgInput"
                 type="file"
-                required
-              />
-              <span>Описание</span>
-              <input
-                className="form-control mb-2 bg-light"
-                name="quality"
-                id="QualityInput"
-                type="text"
                 required
               />
               <button

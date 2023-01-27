@@ -1,4 +1,5 @@
 const created = document.querySelector('#formCreateCard');
+
 if (created) {
   created.addEventListener('submit', async (e) => {
     e.preventDefault();
