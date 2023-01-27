@@ -21,6 +21,7 @@ module.exports = {
           model: { tableName: 'Cards' },
           key: 'id',
         },
+        onDelete: 'cascade',
       },
       count: {
         type: Sequelize.INTEGER,

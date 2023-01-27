@@ -12,13 +12,11 @@ router.get('/:id', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
   const { id } = req.params;
-  const { name, price, quality, img } = req.body;
+  const { price, quality } = req.body;
   const createCard = await Card.update(
     {
-      name,
       price,
       quality,
-      img,
     },
     {
       where: {

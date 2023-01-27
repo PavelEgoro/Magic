@@ -103,14 +103,14 @@ module.exports = function Home({ title, currentUser, Cards, card }) {
             <option>По убыванию</option>
           </select>
         </div>
-        <div className="container cardCont" >
+        <div className="container cardContainer cardCont" >
           <CaardView Cards={Cards} />
         </div>
         <div className="home-color">
           <div className="home">
             <div className="home-1">
               <h3>SECRET CARD</h3>
-              <p>
+              <p className="home__text">
                 Магазин Secret Card предлагает все то, что мы любим в игре Magic
                 (а также несколько потрясающих совместных проектов)! Вас ждут
                 карты с веселыми и необычными иллюстрациями, новые художники, а
@@ -131,6 +131,7 @@ module.exports = function Home({ title, currentUser, Cards, card }) {
           </div>
         </footer>
       </div>
+      <script src="/addCardToBasket.js" />
     </Layout>
   );
 };
