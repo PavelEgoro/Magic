@@ -1,7 +1,7 @@
 const React = require('react');
 const Layout = require('./Layout');
-
-module.exports = function Home({ title, currentUser, Cards }) {
+const CaardView = require('./CaardView');
+module.exports = function Home({ title, currentUser, Cards, card }) {
   return (
     <Layout title="SECRET CARD" currentUser={currentUser}>
       {/* <div className="container">
@@ -97,29 +97,20 @@ module.exports = function Home({ title, currentUser, Cards }) {
       </div>
       <div className="homePage">
         <div className="catalog-home">
-          <h1>Каталог карт</h1>
+          <h1 className="option">Каталог карт</h1>
+          <select>
+            <option className="option1">По возрастанию</option>
+            <option className="option1">По убыванию</option>
+          </select>
         </div>
-        <div className="container cardContainer">
-          <div className="catalog row">
-            {Cards.map((el) => (
-              <div
-                className="card catalog__card cardPika pika animated"
-                key={el.id}
-              >
-                <img src={el.img} className="img-card" alt="img" />
-                <style className="hover" />
-                <button type="button" className="killAll delete" id={el.id}>
-                  <img src="/img/icon.png" alt="" className="addCard" />
-                </button>
-              </div>
-            ))}
-          </div>
+        <div className="container cardContainer cardCont">
+          <CaardView Cards={Cards} />
         </div>
         <div className="home-color">
           <div className="home">
             <div className="home-1">
               <h3>SECRET CARD</h3>
-              <p>
+              <p className="home__text">
                 Магазин Secret Card предлагает все то, что мы любим в игре Magic
                 (а также несколько потрясающих совместных проектов)! Вас ждут
                 карты с веселыми и необычными иллюстрациями, новые художники, а

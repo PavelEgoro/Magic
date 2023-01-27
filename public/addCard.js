@@ -42,3 +42,4 @@ if (addForm) {
     e.target.reset();
   });
 }
+

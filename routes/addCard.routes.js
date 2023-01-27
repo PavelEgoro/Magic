@@ -2,6 +2,7 @@ const router = require('express').Router();
 const path = require('path');
 const { User } = require('../db/models');
 const { Card } = require('../db/models');
+
 const create = require('../views/AddCard');
 const CardView = require('../views/Card');
 
@@ -63,7 +64,13 @@ router.post('/upload', async (req, res) => {
 
 router.delete('/:idCard', async (req, res) => {
   const { idCard } = req.params;
-  const del = await Card.destroy({ where: { id: idCard } });
+  // const userId = req.session.userId;
+  const del = await Card.destroy({
+    where: {
+      id: idCard,
+      user_id: req.session.userId,
+    },
+  });
   res.json({ key: del });
 });
 module.exports = router;

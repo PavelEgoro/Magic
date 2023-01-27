@@ -2,23 +2,20 @@ const React = require('react');
 
 module.exports = function Card({ card }) {
   return (
-    <div className="catalog__card" key={card.id}>
+    <div className="catalog__card catalog__style" key={card.id}>
       <img src={card.img} className="img-card" alt="img" />
-      <p className="catalog__text">{card.price}</p>
-      <p className="catalog__text">{card.quality}</p>
+      {/* <p className="catalog__text">Цена {card.price}</p>
+      <p className="catalog__text">Качество {card.quality}</p> */}
       <style className="hover" />
       <a href={`/createcard/${card.id}`}>
-        <button type="submit" className="button">
-          Изменить
-        </button>
+        <img src="/img/icon3.png" alt="" className="icon_style" />
       </a>
-      <button
-        type="submit"
+      <img
+        src="/img/icon2.png"
         data-id={card.id}
-        className="button js-delete killAll"
-      >
-        Удалить
-      </button>
+        alt=""
+        className="js-delete killAll icon_delete"
+      />
     </div>
   );
 };
