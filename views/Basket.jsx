@@ -1,9 +1,9 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-module.exports = function Basket({ title }) {
+module.exports = function Basket({ title, currentUser }) {
   return (
-    <Layout title={title}>
+    <Layout title={title} currentUser={currentUser}>
       <div className="container catalog__kk">
         <p>Ваша корзина</p>
         <div className="catalog row">
