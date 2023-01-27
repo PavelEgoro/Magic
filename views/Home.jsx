@@ -97,7 +97,6 @@ module.exports = function Home({ title, currentUser, Cards }) {
       </div>
       <div className="homePage">
         <div className="container cardContainer">
-
           <div className="catalog row">
             {Cards.map((el) => (
               <div
@@ -121,7 +120,7 @@ module.exports = function Home({ title, currentUser, Cards }) {
           <div className="home">
             <div className="home-1">
               <h3>SECRET CARD</h3>
-              <p>
+              <p className="home__text">
                 Магазин Secret Card предлагает все то, что мы любим в игре Magic
                 (а также несколько потрясающих совместных проектов)! Вас ждут
                 карты с веселыми и необычными иллюстрациями, новые художники, а

@@ -29,7 +29,7 @@ module.exports = function Nav({ currentUser }) {
           </div>
         ) : (
           <div className="nav_flex">
-            <p>{currentUser.name}</p>
+            <p className="text__color">Привет {currentUser.name}!</p>
             <a className="nav__link" href="/basket">
               КОРЗИНА
             </a>
