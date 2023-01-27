@@ -1,8 +1,10 @@
+
 const router = require('express').Router();
 const BasketView = require('../views/Basket');
 const {
   User, Basket, BasketList, Card,
 } = require('../db/models');
+
 
 router.get('/', async (req, res) => {
   const { userId } = req.session;
@@ -36,7 +38,7 @@ router.post('/:id', async (req, res) => {
 });
 
 router.delete('/:id', async (req, res) => {
-  const { id } = req.params;
+
   console.log(typeof (id));
   // const card = await BasketList.findOne({ where: { card_id: Number(id) } });
   // await Basket.update({ status: true, where: { id: card.id }, returning: true });

@@ -10,6 +10,25 @@ module.exports = function Home({ title, currentUser, Cards }) {
         ) : (
           <div>Ура, ты зарегистрировался</div>
         )}
+<<<<<<< HEAD
+      </div>
+      <div className="container">
+        <div className="catalog row">
+          {Cards.map((el) => (
+
+            <div
+              className="card catalog__card cardPika pika animated"
+              key={el.id}
+            >
+              <img src={el.img} className="img-card" alt="img" />
+              <style className="hover" />
+              <button type="button" className="killAll">
+                Добавить в корзину
+              </button>
+
+            </div>
+          ))}
+=======
       </div> */}
 
       <div
@@ -37,6 +56,7 @@ module.exports = function Home({ title, currentUser, Cards }) {
             data-bs-slide-to="2"
             aria-label="Slide 3"
           />
+>>>>>>> ccf954608526f0913e6e13948745e7e32d06c866
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active" data-bs-interval="10000">
