@@ -16,6 +16,11 @@ module.exports = function Layout({ children, currentUser, title }) {
           integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
           crossOrigin="anonymous"
         />
+        <link
+          rel="shortcut icon"
+          href="/img/favicon.png"
+          type="image/png"
+        />
         <script
           src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
           defer
