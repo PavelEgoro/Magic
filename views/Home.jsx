@@ -110,7 +110,7 @@ module.exports = function Home({ title, currentUser, Cards }) {
             набора как не бывало!
           </p>
         </div>
-        <div className="container">
+        <div className="container cardContainer">
           <div className="catalog row">
             {Cards.map((el) => (
               <div
@@ -119,8 +119,8 @@ module.exports = function Home({ title, currentUser, Cards }) {
               >
                 <img src={el.img} className="img-card" alt="img" />
                 <style className="hover" />
-                <button type="button" className="killAll delete">
-                  <img src="/img/icon.png" alt="" />
+                <button type="button" className="killAll delete" id={el.id}>
+                  <img src="/img/icon.png" alt="" className="addCard" />
                 </button>
               </div>
             ))}
@@ -133,6 +133,7 @@ module.exports = function Home({ title, currentUser, Cards }) {
           </div>
         </footer>
       </div>
+      <script src="/addCardToBasket.js" />
     </Layout>
   );
 };

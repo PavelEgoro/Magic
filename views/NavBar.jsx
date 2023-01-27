@@ -17,9 +17,6 @@ module.exports = function Nav({ currentUser }) {
         </div>
         {!currentUser ? (
           <div className="nav_flex">
-            <a className="nav__link" href="/">
-              КОРЗИНА
-            </a>
             <a className="nav__link" href="/auth/login">
               ВОЙТИ
             </a>
@@ -29,6 +26,10 @@ module.exports = function Nav({ currentUser }) {
           </div>
         ) : (
           <div className="nav_flex">
+            <p>{currentUser.name}</p>
+            <a className="nav__link" href="/basket">
+              КОРЗИНА
+            </a>
             <a className="nav__link" href="/auth/logout">
               <button type="submit" className="button js-btn-exit">
                 ВЫЙТИ

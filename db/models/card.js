@@ -4,9 +4,9 @@ const {
 
 module.exports = (sequelize, DataTypes) => {
   class Card extends Model {
-    static associate({ Basket, User }) {
+    static associate({ BasketList, User }) {
       this.belongsTo(User, { foreignKey: 'user_id' });
-      this.hasMany(Basket, { foreignKey: 'card_id' });
+      this.hasMany(BasketList, { foreignKey: 'card_id' });
     }
   }
   Card.init({

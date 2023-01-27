@@ -1,58 +1,47 @@
 const router = require('express').Router();
 const BasketView = require('../views/Basket');
-const { User, Basket, BasketList } = require('../db/models');
+const {
+  User, Basket, BasketList, Card,
+} = require('../db/models');
 
 router.get('/', async (req, res) => {
   const { userId } = req.session;
-  const currentUser = await User.findByPk(userId);
 
-  // const actualBasket = await Basket.findAll(
-  //   {
-  //     include: {
-  //       model: BasketList,
-  //       key: 'card_id',
-  //       raw: true,
-  //     },
-  //     where: { user_id: userId, status: false },
-  //   },
+  const cards = await Card.findAll();
 
-  // );
-  // console.log(actualBasket);
-  res.renderComponent(BasketView, { currentUser });
+  const actualBasket = await Basket.findAll(
+    {
+      where: { user_id: userId },
+      order: [['createdAt', 'DESC']],
+      include: {
+        model: BasketList,
+        attributes: ['card_id'],
+      },
+      raw: true,
+    },
+  );
+
+  const basketCards = [];
+  for (let i = 0; i < actualBasket.length; i += 1) {
+    basketCards.push(cards.filter((card) => card.id === actualBasket[i]['BasketLists.card_id']));
+  }
+  res.renderComponent(BasketView, { basketCards });
 });
 
-// router.get('/', async (req, res) => {
-//   const { userId } = req.session;
-//   const currentUser = await User.findByPk(userId);
-//   const cards = await User.findAll({
-//     raw: true,
-//     where: {
-//       id: req.session.currentUser,
-//     },
-//     include: [User.Card],
-//   });
-//   const user = await User.findOne({
-//     raw: true,
-//     where: {
-//       id: req.session.currentUser.id,
-//     },
-//   });
-//   res.renderComponent(BasketView, { user, cards });
-// });
-// const BList = await Promise.all(
-//   cardBasket.map(async (el) => await Card.findOne({ where: { id: el.card_id } })),
-// );
-// res.renderComponent(BasketView, {
-//   title: 'My basket',
-//   user,
-//   card_id: BasketList,
-// });
+router.post('/:id', async (req, res) => {
+  const { userId } = req.session;
+  const { id } = req.params;
+  const newBasket = await Basket.create({ user_id: userId, status: false });
+  await BasketList.create({ basket_id: newBasket.id, card_id: Number(id), count: 1 });
+});
 
-// routerBasket.delete('/delete/:id', async (req, res) => {
-//   const { id } = req.params;
-//   const card = await Basket.findOne({ where: { card_id: Number(id) } });
-//   card.destroy();
-//   res.json({ message: 'done' });
-// });
+router.delete('/:id', async (req, res) => {
+  const { id } = req.params;
+  console.log(typeof (id));
+  // const card = await BasketList.findOne({ where: { card_id: Number(id) } });
+  // await Basket.update({ status: true, where: { id: card.id }, returning: true });
+  const result = await BasketList.destroy({ where: { card_id: Number(id) } });
+  res.json(result);
+});
 
 module.exports = router;

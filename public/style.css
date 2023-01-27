@@ -55,6 +55,7 @@ ul {
 
 form {
   width: 50vw;
+  margin-top: 15em;
 }
 
 .book__form {
@@ -97,6 +98,7 @@ form {
 .reg_flex {
   display: flex;
   justify-content: center;
+  margin-top: 15em;
 }
 
 .form_flex {
