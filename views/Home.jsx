@@ -97,13 +97,13 @@ module.exports = function Home({ title, currentUser, Cards, card }) {
       </div>
       <div className="homePage">
         <div className="catalog-home">
-          <h1>Каталог карт</h1>
+          <h1 className="option">Каталог карт</h1>
           <select>
-            <option>По возрастанию</option>
-            <option>По убыванию</option>
+            <option className="option1">По возрастанию</option>
+            <option className="option1">По убыванию</option>
           </select>
         </div>
-        <div className="container cardContainer cardCont" >
+        <div className="container cardContainer cardCont">
           <CaardView Cards={Cards} />
         </div>
         <div className="home-color">
