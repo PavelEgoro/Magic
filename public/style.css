@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +19,12 @@ ul {
 /* p {
   margin-bottom: 0;
 } */
+
+body {
+  color: white;
+  font-family: 'IBM Plex Mono', monospace;
+  cursor: default;
+}
 
 .homePage {
   background-image: url('/img/body.jpg');
@@ -46,11 +54,56 @@ ul {
 
 .my-carousel {
   margin-top: 50px;
+  color: white;
 }
 
 .my-carousel_img {
   -webkit-filter: contrast(116%) grayscale(0%) hue-rotate(0deg) invert(0%);
   filter: contrast(116%) grayscale(0%) hue-rotate(0deg) invert(0%);
+}
+
+.my-carousel_text {
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 0 1px 2px black;
+  word-spacing: 2px;
+}
+
+.homePage {
+  /* background-color: white; */
+  /* padding-top: 20px; */
+}
+
+.home-color {
+  background-color: white;
+}
+
+.catalog-home {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  background-color: #e9e9e9;
+  color: black;
+}
+
+.home {
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-1 {
+  background-color: white;
+  height: 300px;
+  vertical-align: middle;
+  line-height: 26px;
+  padding-left: 20px;
+  padding-top: 60px;
+}
+.home-img {
+  height: 300px;
 }
 
 form {
@@ -441,7 +494,7 @@ form {
   filter: none !important;
 }
 
-.nav_flex{
+.nav_flex {
   display: flex;
   align-items: center;
   gap: 15px;

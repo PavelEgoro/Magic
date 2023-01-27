@@ -3,7 +3,7 @@ const Layout = require('./Layout');
 
 module.exports = function Home({ title, currentUser, Cards }) {
   return (
-    <Layout title={title} currentUser={currentUser}>
+    <Layout title="SECRET CARD" currentUser={currentUser}>
       {/* <div className="container">
         {!currentUser ? (
           <div>Зарегистрируйся</div>
@@ -46,9 +46,8 @@ module.exports = function Home({ title, currentUser, Cards }) {
               alt="carousel"
             />
             <div className="carousel-caption d-none d-md-block">
-              <p>
-                Сила приходит вместе с совершенством. Взгляните на выпуск
-                Phyrexia: All Will Be One уже сегодня!
+              <p className="my-carousel_text">
+                Сила приходит вместе с совершенством
               </p>
             </div>
           </div>
@@ -59,9 +58,8 @@ module.exports = function Home({ title, currentUser, Cards }) {
               alt="carousel"
             />
             <div className="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>
-                Some representative placeholder content for the second slide.
+              <p className="my-carousel_text">
+                Взгляните на выпуск Phyrexia: All Will Be One уже сегодня!
               </p>
             </div>
           </div>
@@ -72,9 +70,8 @@ module.exports = function Home({ title, currentUser, Cards }) {
               alt="carousel"
             />
             <div className="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>
-                Some representative placeholder content for the third slide.
+              <p className="my-carousel_text">
+                Твои уникальные карты ждут тебя
               </p>
             </div>
           </div>
@@ -99,16 +96,8 @@ module.exports = function Home({ title, currentUser, Cards }) {
         </button>
       </div>
       <div className="homePage">
-        <div className="home container">
-          <h3>SECRET LAIR</h3>
-          <p>
-            Наборы Secret Lair предлагают все то, что мы любим в игре Magic (а
-            также несколько потрясающих совместных проектов)! Вас ждут карты с
-            веселыми и необычными иллюстрациями, новые художники, а также
-            оформления, о которых вы и не мечтали. Однако поторопитесь! Каждый
-            набор появляется в продаже на очень короткое время. Не успеете — и
-            набора как не бывало!
-          </p>
+        <div className="catalog-home">
+          <h1>Каталог карт</h1>
         </div>
         <div className="container cardContainer">
           <div className="catalog row">
@@ -124,6 +113,24 @@ module.exports = function Home({ title, currentUser, Cards }) {
                 </button>
               </div>
             ))}
+          </div>
+        </div>
+        <div className="home-color">
+          <div className="home">
+            <div className="home-1">
+              <h3>SECRET CARD</h3>
+              <p>
+                Магазин Secret Card предлагает все то, что мы любим в игре Magic
+                (а также несколько потрясающих совместных проектов)! Вас ждут
+                карты с веселыми и необычными иллюстрациями, новые художники, а
+                также оформления, о которых вы и не мечтали. Однако
+                поторопитесь! Каждая карта появляется в продаже на очень
+                короткое время. Не успеете — и карты как не бывало!
+              </p>
+            </div>
+            <div className="home-2">
+              <img src="/img/home.png" alt="lion" className="home-img" />
+            </div>
           </div>
         </div>
         <footer className="footer" id="Contacts">
