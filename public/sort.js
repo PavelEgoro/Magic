@@ -11,7 +11,8 @@ document.querySelector('select').addEventListener('change', async (e) => {
   });
   //   const htmlContainer = document.querySelector()
   const date = await res.text();
-  const a = (document.querySelector('.cardCont').innerHTML = date);
+
+  const a = document.querySelector('.cardCont').innerHTML= date;
 
   console.log(a);
 });
