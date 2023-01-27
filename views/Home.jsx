@@ -96,10 +96,8 @@ module.exports = function Home({ title, currentUser, Cards }) {
         </button>
       </div>
       <div className="homePage">
-        {/* <div className="catalog-home">
-          <h1>Каталог карт</h1>
-        </div> */}
-        <div className="container">
+        <div className="container cardContainer">
+
           <div className="catalog row">
             {Cards.map((el) => (
               <div
@@ -108,8 +106,8 @@ module.exports = function Home({ title, currentUser, Cards }) {
               >
                 <img src={el.img} className="img-card" alt="img" />
                 <style className="hover" />
-                <button type="button" className="killAll delete">
-                  <img src="/img/icon.png" alt="" />
+                <button type="button" className="killAll delete" id={el.id}>
+                  <img src="/img/icon.png" alt="" className="addCard" />
                 </button>
                 <div className="icon4">
                   <img src="/img/icon4.png" alt="" />
@@ -144,6 +142,7 @@ module.exports = function Home({ title, currentUser, Cards }) {
           </div>
         </footer>
       </div>
+      <script src="/addCardToBasket.js" />
     </Layout>
   );
 };
